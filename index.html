@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C.E.S.S.</title>
+    <style>
+        /* Estilo básico da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .school-name {
+            font-size: 36px;
+            transition: opacity 0.3s ease;
+        }
+
+        .full-name {
+            font-size: 24px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Quando o mouse passa sobre o nome da escola */
+        .school-name:hover + .full-name {
+            opacity: 1;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="school-name">C.E.S.S.</h1>
+        <div class="full-name">Centro Educacional Semente do Saber</div>
+    </header>
+
+    <section>
+        <h2>Bem-vindo ao C.E.S.S.</h2>
+        <p>Na escola C.E.S.S., estamos comprometidos com a educação de qualidade, preparando nossos alunos para o futuro.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 C.E.S.S. - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Nenhum código JavaScript é necessário para esse efeito, mas podemos adicionar algo mais interativo no futuro.
+    </script>
+</body>
+</html>

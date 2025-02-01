@@ -1,0 +1,205 @@
+/* Reset e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+}
+
+/* ================================
+   Cabeçalho e Navegação
+   ================================ */
+header {
+    background-color: #34eb34;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    transition: all 0.3s ease;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Quando o usuário faz scroll, a classe 'shrink' é adicionada via JavaScript */
+header.shrink {
+    padding: 10px 40px;
+}
+
+/* Logo */
+.logo img {
+    height: 70px;
+    transition: height 0.3s ease;
+}
+
+header.shrink .logo img {
+    height: 30px;
+}
+
+/* Menu de navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover nos itens do menu (exceto 'Sobre' que já tem destaque) */
+nav ul li:not(:has(a.sobre)):hover {
+    background-color: #005408;
+    cursor: pointer;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+/* Destaque para o item 'Sobre' */
+nav ul li a.sobre {
+    background-color: #005408;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+nav ul li a.sobre:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* ================================
+   Carrossel de Imagens
+   ================================ */
+#carousel {
+    margin-top: 100px; /* Compensa o cabeçalho fixo */
+    position: relative;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carousel-container img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+/* Imagem ativa do carrossel */
+.carousel-container img.active {
+    opacity: 1;
+}
+
+/* ================================
+   Seção de Matrícula
+   ================================ */
+#matricula {
+    margin: 40px auto;
+    text-align: center;
+}
+
+#matricula button {
+    background-color: #b4ff05;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#matricula button:hover {
+    background-color: #005408;
+    color: #ffffff;
+}
+
+/* ================================
+   Seção Sobre Nós
+   ================================ */
+#sobre {
+    padding: 40px;
+    background-color: #ffffff;
+    border-left: 10px solid #005408;  /* Destaca a seção com uma borda mais escura */
+    margin: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#sobre h2 {
+    margin-bottom: 20px;
+    color: #005408;
+}
+
+#sobre p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* ================================
+   Rodapé
+   ================================ */
+footer {
+    background-color: #34eb34;
+    padding: 20px;
+    text-align: center;
+    color: #000000;
+    margin-top: 40px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer .social a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer .social a:hover {
+    color: #005408;
+}
+
+/* ================================
+   Responsividade
+   ================================ */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .carousel-container {
+        height: 250px;
+    }
+    .carousel-container img {
+        height: 250px;
+    }
+}
